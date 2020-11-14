@@ -1,0 +1,161 @@
+<img *ngIf="!allCars && ok" src="/assets/images/loading.gif">
+
+
+
+  <div *ngIf="!ok" style="padding: 20px 30px 30px 25px; width: 700px;">
+  <form #formInfo="ngForm">
+    <table>
+      <tr>
+        <td>
+            <div style="border-bottom: 1px solid orange;">
+            <input #pickupDateInfo="ngModel" type="date" name="pickupDate"
+            [(ngModel)]="search.pickupDate" style="text-decoration: white; text-align: left; width: 57%;"><span>תאריך
+            התחלה</span>
+            </div>
+        </td>
+            <td><p></p></td>
+        <td>
+            <div>
+                חיפוש רכבים פנויים לפי תאריכים
+            </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <div style="border-bottom: 1px solid orange;">
+            <input #estimatedReturnDateInfo="ngModel" type="date" name="estimatedReturnDate"
+            [(ngModel)]="search.estimatedReturnDate" style="text-decoration: white; text-align: left;"><span>תאריך סיום</span>
+            </div>
+        </td>
+        
+        <td><p></p></td>
+
+        <td style="text-align: right;"><button (click)="searchVehicles(search.pickupDate,search.estimatedReturnDate)"
+            style="width: 50%; margin-top: 20px;">חפש</button></td>
+      </tr>
+    </table>
+  </form>
+
+  <div *ngIf="ok" style="width: 850px; padding: 20px 35px 30px 30px;">
+  <table>
+    <tr>
+      <td><select name="manufacturer" (change)="onSearchManufacturer($event.target.value)">
+          <option value="" disabled selected hidden> בחירת יצרן </option>
+          <option *ngFor="let c of allCars" [ngValue]="c.manufacturer">{{c.manufacturer}}</option>
+        </select>
+      </td>
+      <td>יצרן</td>
+
+      <td>
+        <p></p>
+      </td>
+
+      <td><select name="model" (change)="onSearchModel($event.target.value)">
+          <option value="" disabled selected hidden> בחירת מודל </option>
+          <option *ngFor="let c of allCars" [ngValue]="c.model">{{c.model}}</option>
+        </select>
+      </td>
+      <td>מודל</td>
+    </tr>
+
+    <tr>
+      <td> <select name="productionYear" (change)="onSearchYear($event.target.value)">
+          <option value="" disabled selected hidden> שנת ייצור </option>
+          <option *ngFor="let c of yearArr" [ngValue]="c.productionYear">{{c}}</option>
+        </select>
+      </td>
+      <td> שנת ייצור </td>
+
+      <td>
+        <p></p>
+      </td>
+
+
+      <td><select name="gear" (change)="onSearchGear($event.target.value)">
+          <option value="" disabled selected hidden> בחירת גיר </option>
+          <option *ngFor="let c of gearArr" [ngValue]="c.gearType">{{c}}</option>
+        </select></td>
+      <td> סוג גיר </td>
+    </tr>
+  </table>
+</div>
+</div>
+
+<!-- search by parameters -->
+<div *ngIf="ok" style="width: 850px; padding: 20px 35px 30px 30px;">
+  <table>
+    <tr>
+      <td><select name="manufacturer" (change)="onSearchManufacturer($event.target.value)">
+          <option value="" disabled selected hidden> בחירת יצרן </option>
+          <option *ngFor="let c of allCars" [ngValue]="c.manufacturer">{{c.manufacturer}}</option>
+        </select>
+      </td>
+      <td>יצרן</td>
+
+      <td>
+        <p></p>
+      </td>
+
+      <td><select name="model" (change)="onSearchModel($event.target.value)">
+          <option value="" disabled selected hidden> בחירת מודל </option>
+          <option *ngFor="let c of allCars" [ngValue]="c.model">{{c.model}}</option>
+        </select>
+      </td>
+      <td>מודל</td>
+    </tr>
+
+    <tr>
+      <td> <select name="productionYear" (change)="onSearchYear($event.target.value)">
+          <option value="" disabled selected hidden> שנת ייצור </option>
+          <option *ngFor="let c of yearArr" [ngValue]="c.productionYear">{{c}}</option>
+        </select>
+      </td>
+      <td> שנת ייצור </td>
+
+      <td>
+        <p></p>
+      </td>
+
+
+      <td><select name="gear" (change)="onSearchGear($event.target.value)">
+          <option value="" disabled selected hidden> בחירת גיר </option>
+          <option *ngFor="let c of gearArr" [ngValue]="c.gearType">{{c}}</option>
+        </select></td>
+      <td> סוג גיר </td>
+    </tr>
+  </table>
+</div>
+
+<br><br>
+
+
+<!-- display search results -->
+<div *ngIf="ok" style="width: 850px; padding: 20px 35px 30px 30px; display: inline-block;">
+  <!-- <table style="width: 850px; padding: 20px 35px 30px 30px;"> -->
+    <!-- <table> -->
+    <table style="text-align:center; align-content: center; border-bottom: 1px solid orange;">
+        <!-- <tr> -->
+      <tr style="text-align:right; text-align: right; border-bottom: 1px solid orange; align-content: center;">
+        <th style="padding-bottom: 10px;"></th>
+        <th style="padding-bottom: 10px;"> יצרן </th>
+        <th style="padding-bottom: 10px;"> שנת יצור </th>
+        <th style="padding-bottom: 10px;"> מודל </th>
+        <th style="padding-bottom: 10px;"> גיר </th>
+        <th style="padding-bottom: 10px;"> עלות </th>
+    </tr>
+    <tr><td></td></tr>
+    <tr *ngFor="let c of filteredCars">
+      <td><button routerLink="/add-rental" class="blackButton">הזמנה</button></td>
+      <td><span class="greySpan"> {{ c.manufacturer }} </span></td>
+      <td><span class="greySpan"> {{ c.productionYear | date :'yyyy' }} </span> </td>
+      <td><span class="greySpan"> {{ c.model }} </span></td>
+      <td><span class="greySpan"> {{ c.gearType }} </span></td>
+      <td><span class="greySpan"> {{ c.dailyFee | currency: 'ILS' }} </span></td>
+      <!-- <td> {{ c.overdueFee | currency: 'ILS' }} </td>
+      <td> {{ c.branchID }} </td> -->
+    </tr>
+  </table><br>
+  <p></p><br>
+</div>
+<br>
+<p></p><br>

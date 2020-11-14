@@ -1,0 +1,61 @@
+
+<img *ngIf="!allVehicles && ok" src="/assets/images/loading.gif">
+
+<!-- <div *ngIf="!ok">
+    <h4>הזן מספר רכב להחזרה</h4><br>
+    <input #registrationNumberInfo="ngModel" name="registrationNumber" [(ngModel)]="registrationNumber">
+    <br><br>
+    <button (click)="findOneRental()">החזר</button>
+</div>
+
+<div *ngIf="ok">
+    <p>העלות הכוללת הינה: </p>
+    <br>
+    <p>{{totalCost()| currency:"ILS"}}</p>
+    <button (click)="returnCar()">אשר החזרה</button>
+</div> -->
+
+<div *ngIf="allVehicles">
+<!-- 
+    <table>
+        <tr>
+            <th> <label>Registration Number: </label></th>
+        </tr>
+        <tr>
+            <td> <select name="registrationNumber" (change)="onSearchRegistrationNumber($event.target.value)">
+                <option value="" disabled selected hidden> Choose Registration Number </option>
+                <option *ngFor="let v of registrationNumberArr" [ngValue]="v.registrationNumber">{{v.registrationNumber}}</option>
+            </select></td>
+
+            <td><label></label>
+                <input type="search" (input)="onSearchChange($event.target.value)" autofocus /> 
+            </td>
+
+        </tr>
+    </table> -->
+
+    <table style="text-align:center; align-content: center; border-bottom: 1px solid orange;">
+        <tr style="border-bottom: 1px solid orange;">
+            <td></td>
+            <th style="padding-bottom: 10px;">מס' הרכב</th>
+            <th style="padding-bottom: 10px;">קילומטראז</th>
+            <th style="padding-bottom: 10px;">ראוי להשכרה</th>
+            <th style="padding-bottom: 10px;">מוכן להשכרה</th>
+            <th style="padding-bottom: 10px;">מס' רישיון</th>
+        </tr>
+
+        <tr><td style="padding-bottom: 20px;"></td></tr>
+
+        <tr *ngFor="let v of allVehicles">
+            <td><button (click)="findOneRental(v.registrationNumber)" class="blackButton">שחרור</button></td>
+            <td><span class="greySpan">{{ v.vehicleID }}</span></td>
+            <td><span class="greySpan">{{ v.mileage }}</span></td>
+            <td><span class="greySpan">{{ v.rentingProper }}</span></td>
+            <td><span class="greySpan">{{ v.rentingAvailibility }}</span></td>
+            <td><span class="greySpan">{{ v.registrationNumber }}</span></td>
+        </tr>
+    </table><br>
+<a routerLink="/add-vehicle" class="blackA" style="height: 40px; width: 160px;">הוספת רכבים</a>
+<p></p><br>
+</div>
+<br><p></p><br>

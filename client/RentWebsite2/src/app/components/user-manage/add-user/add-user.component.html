@@ -1,0 +1,77 @@
+<div><form #formInfo="ngForm"><table>
+      <tr>
+        <td><input #emailInfo="ngModel" name="email" [(ngModel)]="user.email" type="text" placeholder="כתובת דוא”ל" style="width: 220px;"></td>
+        <td><input #lastNameInfo="ngModel" name="lastName" [(ngModel)]="user.lastName" type="text" placeholder="שם משפחה" style="width: 220px;"></td>
+        <td><input #firstNameInfo="ngModel" name="firstName"  [(ngModel)]="user.firstName" type="text" placeholder="שם פרטי" style="width: 220px;"></td>
+        <td><p></p></td>
+      </tr>
+      <tr>
+        <td><input #birthDateInfo="ngModel" type="date" name="birthDate" [(ngModel)]="user.birthDate" style="text-align: left; max-width: 145px;"><span>ת. לידה</span></td>
+        <td><input #passwordInfo="ngModel" name="password" [(ngModel)]="user.password" type="text" placeholder="סיסמא" style="width: 220px;"></td>
+        <td><input  #userNameInfo="ngModel" name="userName" [(ngModel)]="user.userName" type="text" placeholder="שם משתמש" style="width: 220px;"></td>
+        <td style="text-align: right;"><p class="header" style="margin-right: -15px;">רישום</p></td>
+      </tr>
+
+      <tr>
+        <td>
+            <label for="rdo">
+                <span style="border-bottom: none;">נקבה</span>
+                <input type="radio" checked="checked" #genderInfo="ngModel" name="gender" value="male" [(ngModel)]="user.gender">
+              </label>
+              <label for="rdo">
+                <span style="border-bottom: none;">זכר</span>
+                <input type="radio" checked="checked" #genderInfo="ngModel" name="gender" value="female" [(ngModel)]="user.gender">
+              </label>
+        </td>
+        <td><input type="file" accept="image/*" (change)="onFileSelect($event)" style="width: 220px; margin-bottom: 12px; align-content: right;"></td>
+        <td><input #roleIDInfo="ngModel" name="roleID" [(ngModel)]="user.roleID" type="number" placeholder="זיהוי משתמש" style="width: 220px;"></td>
+        <td><button [disabled]="formInfo.form.invalid" (click)="addUser()" style="margin-right: 45px; margin-bottom: 7px; margin-left: 15px;">הוסף</button>
+        </td>
+      </tr>
+    </table></form></div><br><br>
+
+<!-- <div>
+  <form #formInfo="ngForm">
+    <div class="w3-row-padding">
+      <input #firstNameInfo="ngModel" required minlength="2" type="text" placeholder="שם פרטי" name="firstName"
+        [(ngModel)]="user.firstName">
+      <span *ngIf="firstNameInfo.invalid && firstNameInfo.touched">יש להזין שם פרטי</span>
+      <br><br>
+
+      <input #lastNameInfo="ngModel" name="lastName" [(ngModel)]="user.lastName" placeholder="שם משפחה">
+      <span *ngIf="lastNameInfo.invalid && lastNameInfo.touched">יש להזין שם משפחה</span>
+      <br><br>
+
+      <input #userNameInfo="ngModel" required type="text" placeholder="שם משתמש" name="userName" [(ngModel)]="user.userName">
+      <span *ngIf="userNameInfo.invalid && userNameInfo.touched">יש להזין שם משתמש</span>
+      <br><br>
+      <input #emailInfo="ngModel" required minlength="5" type="text" placeholder="מייל" name="email" [(ngModel)]="user.email">
+      <span *ngIf="emailInfo.invalid && emailInfo.touched">יש להזין מייל</span>
+      <br><br>
+      <input #passwordInfo="ngModel" required minlength="5" type="password" placeholder="סיסמא" name="password" [(ngModel)]="user.password">
+      <span *ngIf="passwordInfo.invalid && passwordInfo.touched">יש להזין סיסמא</span>
+      <span *ngIf="passwordInfo.minlength && passwordInfo.touched">סיסמא קצרה</span>
+      <br><br>
+      <input #roleIDInfo="ngModel" required minlength="1" type="number" placeholder="זיהוי משתמש " name="roleID" [(ngModel)]="user.roleID"><br>
+      <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; color:indianred;">
+        למשתמש חדש, יש להזין ספרה 1* </span>
+      <span *ngIf="roleIDInfo.invalid && roleIDInfo.touched">יש להזין זיהוי משתמש</span>
+      <br><br>
+      <h4>תאריך לידה</h4>
+      <br>
+      <input #birthDateInfo="ngModel" type="date" name="birthDate" [(ngModel)]="user.birthDate">
+      <span *ngIf="birthDateInfo.invalid ">יש להזין תאריך תקין </span>
+      <br><br>
+      <input #genderInfo="ngModel" required type="radio" name="gender" value="male" [(ngModel)]="user.gender">זכר
+      <br>
+      <input #genderInfo="ngModel" required type="radio" name="gender" value="female" [(ngModel)]="user.gender">נקבה
+      <span *ngIf="genderInfo.invalid && genderInfo.touched">יש להזין מין</span>
+      <br><br>
+      <input type="file" accept="image/*" (change)="onFileSelect($event)">
+      <br><br>
+      <button [disabled]="formInfo.form.invalid" (click)="addUser()">הוסף</button>
+      <br>
+    </div>
+
+  </form>
+  <br> -->

@@ -1,0 +1,61 @@
+table {
+    margin: auto;
+}
+
+table, th, td {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+tr:nth-child(even) {
+    background-color: honeydew;
+}
+
+tr:nth-child(odd) {
+    background-color: silver;
+}
+
+div {
+    height: 60%;
+    overflow: auto;
+    background-color: whitesmoke;
+}
+
+button {
+    background-color: dimgrey; 
+    border: none;
+    color: black;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: gold;
+    color: black;
+}
+
+a {
+    background-color: gainsboro;
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 2px;
+    transition-duration: 0.4s;
+    font-size: 14px;
+    margin: 20px;
+}
+
+h4{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    padding: 0;
+    margin: auto;
+}

@@ -1,0 +1,184 @@
+div {
+    display: inline-block;
+    margin-top: 30px;
+    background-color: black;
+  }
+
+  button {
+    background-color: gold;
+    border: none;
+    color: black;
+    padding: 11px 18px 9px 18px;
+    text-align: right;
+    font-size: 16px;
+    border-radius: 1px;
+    transition-duration: 0.4s;
+    width: 100%
+  }
+
+  button:hover {
+    background-color: orange;
+    color: black;
+  }
+
+  input {
+    align-items: center;
+    width: auto;
+    padding: 6px 15px;
+    margin: 6px 0;
+    border: none;
+    border-bottom: 1px solid orange;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: right;
+    color: slategray;
+    background-color: black;
+    width: 80%;
+  }
+
+  .datePicker{
+    font-size: 14px;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: right;
+    color: slategray;
+    background-color: black;
+    padding: 3px 5px;
+    width: 190px;
+  }
+
+  .header{
+    font-size: 18px;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    color: white;
+  }
+
+ span {
+    padding: 8px 12px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 1px solid orange;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: right;
+    color: slategray;
+    background-color: black;
+  }
+
+
+  table {
+    border-collapse: collapse;
+    margin: 30px 50px 20px 30px;
+    align-items: center;
+  }
+
+  td,
+  th {
+    font-size: 18px;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    color: white;
+    padding: 12px;
+  }
+
+a {
+    background-color: gainsboro;
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 2px;
+    transition-duration: 0.4s;
+    font-size: 14px;
+    margin: 20px;
+}
+
+
+.svg{
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: white;
+  stroke-width: 2;
+  stroke-dasharray: 17;
+  stroke-dashoffset: 17;
+  transform: translate3d(0,0,0);
+}
+.rdo{
+position: relative;
+display: block;
+float: left;
+width: 18px;
+height: 18px;
+border-radius: 10px;
+background-color: #606062;
+background-image: linear-gradient(#474749,#606062);
+box-shadow: inset 0 1px 1px rgba(white,.15), inset 0 -1px 1px rgba(black,.15);
+transition: all .15s ease;
+}
+
+:after{
+  content: "";
+  position: absolute;
+  display: block;
+  top: 6px;
+  left: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
+  opacity: 0;
+  transform: scale(0);
+}
+  
+.rdo + span{
+float: left;
+}
+
+label{
+  display: inline-block;
+  margin: 20px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]
+input[type="radio"]{
+  position: absolute;
+  opacity: 0;
+}
+
+input[type="radio"]:checked + .rdo{
+  background-color: orange;
+  background-image: linear-gradient(#ffcc33,#cc9933);
+}
+
+:after{
+    opacity: 1;
+    transform: scale(1);
+    transition: all .15s ease;
+}
+  
+.svg{
+    stroke-dashoffset: 0;
+    transition: all .15s ease;
+}
+
+input.file{
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+  }
+
+  

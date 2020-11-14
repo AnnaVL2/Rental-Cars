@@ -1,0 +1,41 @@
+<img *ngIf="!allRentals && ok" src="/assets/images/loading.gif">
+
+<div *ngIf="allRentals">
+
+  <table style="text-align:center; align-content: center; border-bottom: 1px solid orange;">
+    <tr style="border-bottom: 1px solid orange;">
+      <td></td>
+      <th style="padding-bottom: 10px;">מס' הזמנה</th>
+      <th style="padding-bottom: 10px; text-align:center;">איסוף</th>
+      <th style="padding-bottom: 10px; text-align:center;">החזרה</th>
+      <th style="padding-bottom: 10px;">החזרה בפועל</th>
+      <th style="padding-bottom: 10px;">מס' רכב</th>
+      <th style="padding-bottom: 10px;">שם משתמש</th>
+      <th style="padding-bottom: 10px;">מס' משתמש</th>
+      <!-- <th>Edit</th> -->
+      <!-- <th>Delete</th> -->
+    </tr>
+
+    <tr>
+      <td style="padding-bottom: 20px;"></td>
+    </tr>
+
+    <tr *ngFor="let r of allRentals">
+      <td><button (click)="deleteRental(r.rentalCode)" class="blackButton">מחיקה</button></td>
+      <td><span class="greySpan">{{ r.rentalCode }}</span></td>
+      <td><span class="greySpan">{{ r.pickupDate | date }}</span></td>
+      <td><span class="greySpan">{{ r.estimatedReturnDate | date }}</span></td>
+      <td><span class="greySpan">{{ r.actualReturnDate | date }}</span></td>
+      <td><span class="greySpan">{{ r.vehicleID }}</span></td>
+      <td><span class="greySpan">{{ r.userName }}</span></td>
+      <td><span class="greySpan">{{ r.userID }}</span></td>
+      <!-- העריכה לא פועלת -->
+      <!-- <td>
+                <button (click)="editRental(r.rentalCode)">עריכה</button>
+            </td> -->
+    </tr>
+  </table><br>
+  <a routerLink="/add-rental" class="blackA" style="height: 40px; width: 160px;">הוספת הזמנה</a>
+  <p></p><br>
+</div>
+<p></p><br>

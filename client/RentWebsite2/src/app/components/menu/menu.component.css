@@ -1,0 +1,127 @@
+ div {
+    display: bock;
+  }
+
+nav{
+    display: block;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    letter-spacing: 0.2px;
+    color: rgba(0, 0, 0, 0.6);
+    text-align: right;
+    padding: 20px 1px 15px 1px;
+    text-decoration: none;
+    margin: 15px;
+}
+
+ .navbar{
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+ }
+
+ .navbar:before{
+    display: table;
+    content: " ";
+    box-sizing: border-box;
+ }
+
+ .navbar:after{
+    clear: both;
+    display: table;
+    content: " ";
+    box-sizing: border-box;
+ }
+
+ 
+ .navbar-inverse{
+     background-color: white;
+     border-color: none;
+ }
+
+ .navbar-fixed-top{
+     top:0;
+     border-width: 0 0 1px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 1px;
+    border-left-width: 0px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+ }
+
+
+ .container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+}
+
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+ 
+ 
+ /* /////////////////////////////////// */
+ 
+ 
+ 
+ div {
+    display: inline;
+    max-width: 650px;
+    padding: 10px;
+  }
+
+  ul{
+    list-style-type: disc;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+ul.topnav {
+  list-style-type: none;
+  padding: -20px;
+  overflow: hidden;
+  line-height: 1;
+}
+
+ul.topnav li {
+  float: right;
+}
+
+
+ul.topnav li a {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.2px;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: right;
+  padding: 20px 1px 15px 1px;
+  text-decoration: none;
+  margin: 15px;
+}
+
+
+ul.topnav li a:hover:not(.active) {
+  border-bottom-style: solid;
+  border-color: rgb(255, 204, 51);
+  position: relative;
+}
+
+
+ul.topnav li.left {
+  float: left;
+}

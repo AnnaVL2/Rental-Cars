@@ -1,0 +1,16 @@
+
+<div>
+    <form #formInfo="ngForm">
+        <table >
+            <tr>
+              <td><input #userNameInfo="ngModel" type="text" name="userName" placeholder="שם משתמש" [(ngModel)]="credentials.userName" style="text-decoration: white;"></td>
+              <td>כניסה למערכת</td>
+            </tr>
+            <tr>
+              <td><input #passwordInfo="ngModel" type="password" name="password" placeholder="סיסמה" [(ngModel)]="credentials.password"></td>
+              <td><button (click)="login3()">אישור</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+    </div>

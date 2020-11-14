@@ -1,0 +1,55 @@
+<div style="padding: 20px 35px 30px 30px;">
+    <form #formInfo="ngForm">
+      <table>
+        <tr>
+          <td style="width: 350px;">
+            <div style="border-bottom: 1px solid orange;">
+              <input #estimatedReturnDateInfo="ngModel" type="date" name="estimatedReturnDate"
+                [(ngModel)]="rental.estimatedReturnDate" style="text-align: left;"><span style="color:white;">תאריך סיום</span><br>
+              <span *ngIf="estimatedReturnDateInfo.invalid && estimatedReturnDateInfo.touched" class="mandatorySpan">חסר
+                תאריך סיום</span>
+            </div>
+  
+          </td>
+  
+          <td style="width: 350px;">
+            <div style="border-bottom: 1px solid orange;">
+              <input #estimatedReturnDateInfo="ngModel" type="date" placeholder="תאריך התחלה" name="pickupDate"
+                [(ngModel)]="rental.pickupDate" style="text-align: left;"><span style="color:white;">תאריך התחלה</span><br>
+              <span *ngIf="estimatedReturnDateInfo.invalid && estimatedReturnDateInfo.touched" class="mandatorySpan">חסר
+                תאריך התחלה</span>
+            </div>
+  
+          </td>
+  
+          <td>
+              <div style="width: 200px">הזמנת רכב 
+          </div></td>
+        </tr>
+  
+        <tr>
+          <td style="width: 360px;">
+              <div style="border-bottom: 1px solid orange;">
+            <select #userIDInfo="ngModel" required name="userID" [(ngModel)]="rental.userID">
+              <option *ngFor="let u of allUsers" [ngValue]="u.userID">{{u.userName}}</option>
+            </select><span style="border: none; color:white;">שם משתמש</span>
+            </div>
+          </td>
+  
+          <td style="width: 300px;">
+              <div style="border-bottom: 1px solid orange;">
+            <select #manufacturerInfo="ngModel" required name="manufacturer" [(ngModel)]="rental.manufacturer">
+              <option *ngFor="let vt of allVehicleTypes" [ngValue]="vt.manufacturer">
+                {{vt.manufacturer}}, {{vt.model}}</option>
+            </select><span style="border: none; color:white;">בחירת יצרן ומודל</span></div>
+          </td>
+  
+          <td>
+        <button [disabled]="formInfo.form.invalid" (click)="addRental()">אישור</button>
+        </td>
+
+        </tr>
+      </table>
+    </form>
+  </div>
+<p></p><br>

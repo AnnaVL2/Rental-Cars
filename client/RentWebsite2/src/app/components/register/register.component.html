@@ -1,0 +1,52 @@
+
+<div>
+    <br>
+    <h4>רישום משתמש למערכת</h4><br>
+    <form #formInfo="ngForm">
+        <input #firstNameInfo="ngModel" required minlength="2" type="text" placeholder="שם פרטי" name="firstName"
+            [(ngModel)]="user.firstName">
+        <span *ngIf="firstNameInfo.invalid && firstNameInfo.touched">יש להזין שם פרטי</span>
+        <br><br>
+
+        <input #lastNameInfo="ngModel" required minlength="2" type="text" placeholder="שם משפחה" name="lastName"
+            [(ngModel)]="user.lastName">
+        <span *ngIf="lastNameInfo.invalid && lastNameInfo.touched">יש להזין שם משפחה</span>
+        <br><br>
+
+        <input #userNameInfo="ngModel" required type="text" placeholder="שם משתמש" name="userName"
+            [(ngModel)]="user.userName">
+        <span *ngIf="userNameInfo.invalid && userNameInfo.touched">יש להזין שם משתמש</span>
+        <br><br>
+        <input #emailInfo="ngModel" required minlength="5" type="text" placeholder="מייל" name="email"
+            [(ngModel)]="user.email">
+        <span *ngIf="emailInfo.invalid && emailInfo.touched">יש להזין מייל</span>
+        <br><br>
+        <input #passwordInfo="ngModel" required minlength="5" type="password" placeholder="סיסמא" name="password"
+            [(ngModel)]="user.password">
+        <span *ngIf="passwordInfo.invalid && passwordInfo.touched">יש להזין סיסמא</span>
+        <span *ngIf="passwordInfo.minlength && passwordInfo.touched">סיסמא קצרה</span>
+        <br><br>
+
+
+            <input #roleIDInfo="ngModel" required minlength="1" type="number" placeholder="זיהוי משתמש " name="roleID"
+                [(ngModel)]="user.roleID">
+            <span *ngIf="roleIDInfo.invalid && roleIDInfo.touched">יש להזין זיהוי משתמש</span>
+            <br><br>
+
+
+        <h4>תאריך לידה</h4>
+        <br>
+        <input #birthDateInfo="ngModel" type="date" name="birthDate" [(ngModel)]="user.birthDate">
+        <span *ngIf="birthDateInfo.invalid ">יש להזין תאריך תקין </span>
+        <br><br>
+        <input #genderInfo="ngModel" required type="radio" name="gender" value="male" [(ngModel)]="user.gender">זכר
+        <br>
+        <input #genderInfo="ngModel" required type="radio" name="gender" value="female" [(ngModel)]="user.gender">נקבה
+        <span *ngIf="genderInfo.invalid && genderInfo.touched">יש להזין מין</span>
+        <br><br>
+        <input type="file" accept="image/*" (change)="onFileSelect($event)">
+        <br><br>
+        <button [disabled]="formInfo.form.invalid" (click)="addUser()">הוסף</button>
+        <br>
+    </form>
+</div>

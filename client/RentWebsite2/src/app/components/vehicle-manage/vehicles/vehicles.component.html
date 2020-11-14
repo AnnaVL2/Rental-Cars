@@ -1,0 +1,55 @@
+<!-- <h4>אזור מנהל</h4>
+<div style="text-align:center; align-content: center;">
+    <table style="margin: 30px 10px 0px 30px;">
+        <tr>
+            <td>
+                <a routerLink="/rentals" routerLinkActive="active">ניהול הזמנות</a>
+            </td>
+            <td><a routerLink="/vehicle-types-manage" routerLinkActive="active">ניהול סוגי רכב</a>
+            </td>
+            <td><a routerLink="/vehicles" routerLinkActive="active"  style="font-weight: bold;">ניהול רכבים</a>
+            </td>
+            <td><a routerLink="/users" routerLinkActive="active">ניהול משתמשים</a>
+            </td>
+        </tr>
+    </table>
+</div> -->
+
+
+<img *ngIf="!allVehicles && ok" src="/assets/images/loading.gif">
+
+<div *ngIf="allVehicles">
+
+    <table style="text-align:center; align-content: center; border-bottom: 1px solid orange;">
+        <tr style="border-bottom: 1px solid orange;">
+            <td></td>
+            <td></td>
+            <th style="padding-bottom: 10px;">מס' רכב</th>
+            <th style="padding-bottom: 10px;">'קילומטראז</th>
+            <!-- <th style="padding-bottom: 10px;">מוכן להשכרה</th> -->
+            <th style="padding-bottom: 10px;">פנוי להשכרה</th>
+            <th style="padding-bottom: 10px;">מס' רשיון</th>
+            <!-- <th style="padding-bottom: 10px;">Image</th> -->
+            <!-- <th style="padding-bottom: 10px;">Edit</th> -->
+            <!-- <th style="padding-bottom: 10px;">Delete</th> -->
+        </tr>
+
+        <tr><td style="padding-bottom: 20px;"></td></tr>
+
+        <tr *ngFor="let v of allVehicles">
+            <td><button (click)="editVehicle(v.vehicleID)" class="blackButton">עריכה</button></td>
+            <td><button (click)="deleteVehicle(v.vehicleID)" class="blackButton">מחיקה</button></td>
+            <td><span class="greySpan">{{ v.vehicleID }}</span></td>
+            <td><span class="greySpan">{{ v.mileage }}</span></td>
+            <!-- <td><span class="greySpan">{{ v.rentingProper }}</span></td> -->
+            <td><span class="greySpan">{{ v.rentingAvailibility }}</span></td>
+            <td><span class="greySpan">{{ v.registrationNumber }}</span></td>
+            <!-- <td><span class="greySpan">{{ v.image }}</span></td> -->
+            <!-- העריכה לא פועלת, לא הצלחתי באחרים וכאן כבר לא ניסיתי-->
+        </tr>
+    </table><br>
+<a routerLink="/add-vehicle" class="blackA" style="height: 40px; width: 160px;">הוספת רכבים</a>
+<p></p><br>
+</div>
+<p></p><br>
+

@@ -1,0 +1,36 @@
+
+
+<div style="padding: 20px 35px 30px 30px;">
+  <form #formInfo="ngForm">
+    <table>
+
+      <tr>
+        <td><input style="width: 220px; margin-bottom: 12px; align-content: right;" #mileageInfo="ngModel" required
+            minlength="3" type="text" placeholder="קילומטראז" name="mileage" [(ngModel)]="vehicle.mileage"><br><span
+            *ngIf="mileageInfo.invalid && mileageInfo.touched" class="mandatorySpan">יש להזין
+            קילומטראז</span></td>
+        <td><input style="width: 220px; margin-bottom: 12px; align-content: right;" #rentingProperInfo="ngModel"
+            required minlength="1" type="text" placeholder="תקין להשכרה=1, לא תקין=0" name="rentingProper"
+            [(ngModel)]="vehicle.rentingProper"><br><span
+            *ngIf="rentingProperInfo.invalid && rentingProperInfo.touched" class="mandatorySpan">יש להזין פרטים</span></td>
+        <td>הוספת רכב חדש להשכרה</td>
+      </tr>
+
+      <tr>
+        <td><input style="width: 220px; margin-bottom: 12px; align-content: right;" #rentingAvailibilityInfo="ngModel"
+            required minlength="1" type="text" placeholder="פנוי להשכרה=1, לא פנוי=0" name="rentingAvailibility"
+            [(ngModel)]="vehicle.rentingAvailibility"><br><span
+            *ngIf="rentingAvailibilityInfo.invalid && rentingAvailibilityInfo.touched" class="mandatorySpan">יש להזין פרטים</span></td>
+        <td><input style="width: 220px; margin-bottom: 12px; align-content: right;" #registrationNumberInfo="ngModel"
+            required minlength="7" type="text" placeholder="מספר רכב" name="registrationNumber"
+            [(ngModel)]="vehicle.registrationNumber"><br><span
+            *ngIf="registrationNumberInfo.invalid && registrationNumberInfo.touched" class="mandatorySpan">יש להזין
+            פרטים</span></td>
+        <td><button [disabled]="formInfo.form.invalid" (click)="addVehicle()">הוסף</button></td>
+      </tr>
+      
+    </table>
+  </form>
+</div><br>
+
+<p></p><br>

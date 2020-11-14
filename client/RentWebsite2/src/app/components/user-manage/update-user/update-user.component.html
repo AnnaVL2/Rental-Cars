@@ -1,0 +1,57 @@
+<h4>אזור מנהל</h4>
+<a routerLink="/rentals" routerLinkActive="active">ניהול הזמנות</a>
+<a routerLink="/vehicle-types-manage" routerLinkActive="active">ניהול סוגי רכב</a>
+<a routerLink="/vehicles" routerLinkActive="active">ניהול רכבים</a>
+<a routerLink="/users" routerLinkActive="active"><span style="font-weight: bold;">ניהול משתמשים</span></a>
+
+<!-- העריכה לא פועלת, לא הצלחתי -->
+<div>
+    <h4>עדכון פרטים</h4><br>
+    <form #formInfo="ngForm">
+
+        <input #userIDInfo="ngModel" required minlength="1" type="number" placeholder="user.userID" name="userID"
+            [(ngModel)]="user.userID">
+        <br><br>
+
+        <input #firstNameInfo="ngModel" required minlength="2" type="text" placeholder="שם פרטי" name="firstName"
+            [(ngModel)]="user.firstName">
+        <span *ngIf="firstNameInfo.invalid && firstNameInfo.touched">יש להזין שם פרטי</span>
+        <br><br>
+
+        <input #lastNameInfo="ngModel" required minlength="2" type="text" placeholder="שם משפחה" name="lastName"
+            [(ngModel)]="user.lastName">
+        <span *ngIf="lastNameInfo.invalid && lastNameInfo.touched">יש להזין שם משפחה</span>
+        <br><br>
+        <input #userNameInfo="ngModel" required type="text" placeholder="שם משתמש" name="userName"
+            [(ngModel)]="user.userName">
+        <span *ngIf="userNameInfo.invalid && userNameInfo.touched">יש להזין שם משתמש</span>
+        <br><br>
+
+        <input #emailInfo="ngModel" required minlength="5" type="text" placeholder="מייל" name="email"
+            [(ngModel)]="user.email">
+        <span *ngIf="emailInfo.invalid && emailInfo.touched">יש להזין מייל</span>
+        <br><br>
+        <input #passwordInfo="ngModel" required minlength="5" type="password" placeholder="סיסמא" name="password"
+            [(ngModel)]="user.password">
+        <span *ngIf="passwordInfo.invalid && passwordInfo.touched">יש להזין סיסמא</span>
+        <span *ngIf="passwordInfo.minlength && passwordInfo.touched">סיסמא קצרה</span>
+        <br><br>
+        <input #roleIDInfo="ngModel" required minlength="1" type="number" placeholder="זיהוי משתמש " name="roleID"
+            [(ngModel)]="user.roleID">
+        <span *ngIf="roleIDInfo.invalid && roleIDInfo.touched">יש להזין זיהוי משתמש</span>
+        <br><br>
+
+        <h4> תאריך לידה </h4>
+        <br>
+        <input #birthDateInfo="ngModel" type="date" name="birthDate" [(ngModel)]="user.birthDate">
+        <span *ngIf="birthDateInfo.invalid ">יש להזין תאריך תקין </span>
+        <br><br>
+        <input #genderInfo="ngModel" required type="radio" name="gender" value="male" [(ngModel)]="user.gender">זכר
+        <br>
+        <input #genderInfo="ngModel" required type="radio" name="gender" value="female" [(ngModel)]="user.gender">נקבה
+        <span *ngIf="genderInfo.invalid && genderInfo.touched">יש להזין מין</span>
+        <br><br>
+        <button [disabled]="formInfo.form.invalid" (click)="updateUser(user.userID)">עדכן</button>
+    </form>
+
+</div>

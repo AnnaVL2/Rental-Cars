@@ -1,0 +1,33 @@
+section {
+    height: 100%;
+    box-sizing: border-box; /* So width and height occupy the entire space */
+    text-align: center;
+    /* background-color: rgb(255, 255, 255); */
+    display: grid;
+    grid-template-columns: repeat(12,1fr);  /* 12 virtual columns */
+    grid-template-rows: 20% 70% 10%;
+    padding: 0px;
+}
+
+menu {
+    margin: 0px;
+    /* margin-right: 1px; */
+    /* margin-top: -10px; */
+    grid-column: span 12;
+    padding: 0px;
+}
+
+/* header {
+    grid-column: span 12;
+} */
+
+main {
+    /* background-color: rgb(204, 204, 204); */
+    grid-column: span 12; /* Span over 12 columns */
+    margin-top: 100px;
+}
+
+/* footer {
+    grid-column: span 12;
+} */
+

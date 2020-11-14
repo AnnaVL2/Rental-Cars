@@ -1,0 +1,206 @@
+div {
+    /* display: inline-block; */
+    margin-top: 30px;
+    /* width: 700px; */
+    background-color: black;
+  }
+  
+  
+  button {
+    background-color: gold;
+    border: none;
+    color: black;
+    padding: 11px 32px 9px 32px;
+    text-align: right;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 1px;
+    transition-duration: 0.4s;
+    width: 100%;
+  }
+  
+  .blackButton {
+      background-color: black;
+      border: none;
+      color: orange;
+      padding: 11px 32px 9px 32px;
+      text-align: right;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 1px;
+      transition-duration: 0.4s;
+      width: 100%;
+    }
+  
+  button:hover {
+    background-color: orange;
+    color: black;
+  }
+  
+  a:hover{
+      background-color: orange;
+      color: black;
+  }
+  
+  input {
+    align-items: center;
+    width: auto;
+    padding: 6px 12px;
+    margin: 6px 0;
+    border: none;
+    border-bottom: 1px solid orange;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: right;
+    color: slategray;
+    background-color: black;
+  }
+  
+  select {
+    width: auto;
+    padding: 6px 12px;
+    margin: 6px 0;
+    border: none;
+    border-bottom: 1px solid orange;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: slategray;
+    background-color: black;
+    width: 170px;
+  }
+  
+  a {
+    background-color: gold;
+    border: none;
+    color: black;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 1px;
+    transition-duration: 0.4s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .blackA{
+    background-color: black;
+    border: 1px;
+    color: orange;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 1px;
+    transition-duration: 0.4s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+  
+  label {
+    align-items: center;
+    width: auto;
+    padding: 6px 12px;
+    margin: 6px 0;
+    border: none;
+    border-bottom: 1px solid orange;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: right;
+    color: slategray;
+    background-color: black;
+  }
+  
+  table {
+    display: inline-block;
+    border-collapse: collapse;
+    margin: 20px 0px 15px 0px;
+    text-align: right;
+    background-color: black;
+    padding: 15px 0px 15px 0px;
+  }
+  
+  
+  td,
+  th {
+    font-size: 18px;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    color: white;
+    padding: 1px 10px 0px 10px;
+  }
+  
+  #example2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-origin: content-box, border-box;
+  }
+  
+  .cont {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .topleft {
+    position: absolute;
+    top: 365px;
+    left: 30px;
+    text-align: left;
+  }
+  
+  span {
+    padding: 10px 10px;
+    margin: 7px;
+    border: none;
+    border-bottom: 1px solid orange;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: right;
+    color: slategray;
+    background-color: black;
+  }
+  
+  .smallSpan {
+    color: orange;
+    border-bottom: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 35px;
+    letter-spacing: 1px;
+  }
+  
+  .largeSpan {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 50px;
+    color: orange;
+    border-bottom: none;
+  }
+  
+  .yellowSpan {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: orange;
+    padding: none;
+    font-weight: normal;
+    font-size: 22px;
+  }
+  
+  .greySpan {
+    padding: 8px 12px;
+    margin: 7px 0;
+    border: none;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: right;
+    color: slategray;
+    background-color: black;
+  }
+  

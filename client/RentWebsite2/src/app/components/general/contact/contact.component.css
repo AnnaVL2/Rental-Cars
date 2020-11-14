@@ -1,0 +1,55 @@
+div{
+    size: 100px 200px;
+    outline: gainsboro;
+    outline-width: 1px;
+
+}
+
+h6{
+    font-size: 14px;
+    font-weight: lighter;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    margin: 0;
+    position: relative;
+    line-height: 20px;
+}
+
+h6:nth-child(2){
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    margin: 0;
+    position: relative;
+    line-height: 28px;
+}
+
+h6:nth-child(3){
+    font-size: 18px;
+    font-weight: lighter;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    margin: 0;
+    position: relative;
+    line-height: 26px;
+}
+
+button{
+    background-color: gold;
+    border: none;
+    color: black;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 2px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: orange;
+    color: black;
+}
+
+

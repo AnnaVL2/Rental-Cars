@@ -1,0 +1,58 @@
+
+<div style="padding: 20px 35px 30px 30px;">
+  <form #formInfo="ngForm">
+    <table>
+      <tr>
+        <td style="width: 200px;">
+            <div style="border-bottom: 1px solid orange;">
+          <input #manufacturerInfo="ngModel" required minlength="2" type="text" placeholder="יצרן" name="manufacturer"
+            [(ngModel)]="vehicleType.manufacturer"><br>
+          <span *ngIf="manufacturerInfo.invalid && manufacturerInfo.touched" class="mandatorySpan">יש להזין שם יצרן</span>
+        </div></td>
+
+        <td style="width: 200px;">
+            <div style="border-bottom: 1px solid orange;">
+          <input #modelInfo="ngModel" required type="text" placeholder="דגם" name="model"
+            [(ngModel)]="vehicleType.model"><br>
+          <span *ngIf="modelInfo.invalid && modelInfo.touched" class="mandatorySpan">יש להזין דגם</span>
+        </div></td>
+        
+        <td>
+            <div style="border-bottom: 1px solid orange; width: 260px;">
+          <input #dailyFeeInfo="ngModel" required minlength="3" type="text" placeholder="עלות יומית" name="dailyFee"
+            [(ngModel)]="vehicleType.dailyFee"><br>
+          <span *ngIf="dailyFeeInfo.invalid && dailyFeeInfo.touched" class="mandatorySpan">יש להזין עלות יומית</span>
+        </div></td>
+        <td style="padding-top: 50px;">הוספת מאפייני רכב חדש</td>
+      </tr>
+
+      <tr>
+        <td style="width: 200px;">
+            <div style="border-bottom: 1px solid orange;">
+          <input #overdueFeeInfo="ngModel" required minlength="4" type="text" placeholder="עלות יום איחור"
+            name="overdueFee" [(ngModel)]="vehicleType.overdueFee"><br>
+          <span *ngIf="overdueFeeInfo.invalid && overdueFeeInfo.touched" class="mandatorySpan">יש להזין עלום יום איחור</span>
+        </div></td>
+
+        <td style="width: 200px;">
+            <div style="border-bottom: 1px solid orange;">
+          <input #gearTypeInfo="ngModel" required minlength="1" type="text" placeholder="סוג גיר" name="gearType"
+            [(ngModel)]="vehicleType.gearType"><br>
+          <span *ngIf="gearTypeInfo.invalid && gearTypeInfo.touched" class="mandatorySpan">יש להזין סוג גיר</span>
+        </div></td>
+
+        <td style="width: 250px;">
+            <div style="border-bottom: 1px solid orange;">
+          <input #productionYearInfo="ngModel" type="date" name="productionYear" [(ngModel)]="vehicleType.productionYear" style="text-align: left;"><span>ת. יצור</span><br>
+          <span *ngIf="productionYearInfo.invalid" class="mandatorySpan">יש להזין תאריך יצור תקין </span>
+        </div></td>
+
+        <td>
+          <button [disabled]="formInfo.form.invalid" (click)="addVehicleType()" style="margin-top: 30px;">הוסף</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+<p></p><br>

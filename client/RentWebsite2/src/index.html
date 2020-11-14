@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>RentWebsite</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body style="background-color: lightgray;">
+    <!-- <body> -->
+
+<!-- <body style="height:1500px"> -->
+  <app-layout></app-layout>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: white; height: 83px; border: none;">
+    <div class="container-fluid">
+      <div>
+        <a class="navbar-brand" href="home"><img #myImage src="/assets/images/Tropical_Tripsn_n_Cars_logo.png" routerLink="/home" style="padding: 25px 0px ;"></a>
+      </div>
+      <div style="float: right; padding: 20px 0px 20px 20px;">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="admin" routerLink="/admin">אדמין
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="aMenu" href="rentals" routerLink="/rentals" routerLinkActive="active">ניהול הזמנות</a></li>
+                  <li><a href="vehicle-types-manage" routerLink="/vehicle-types-manage" routerLinkActive="active">ניהול סוגי רכב</a></li>
+                  <li><a href="vehicles" routerLink="/vehicles" routerLinkActive="active">ניהול רכבים</a></li>
+                  <li><a href="users" routerLink="/users" routerLinkActive="active">ניהול משתמשים</a></li>
+                </ul>
+              </li>
+            <li><a href="branch" routerLink="/branch">סניפים</a></li>
+            <!-- <li><a href="employee" routerLink="/employee">החזרת רכבים</a></li> -->
+            <li><a href="search-car" routerLink="/search-car">חיפוש רכבים</a></li>
+            <li><a href="add-user" routerLink="/add-user">רישום</a></li>
+            <li><a href="logout" routerLink="/logout">יציאה</a></li>
+            <li><a href="login" routerLink="/login">כניסה</a></li>
+
+          </ul>
+      </div>
+     
+    </div>
+  </nav>
+<!-- 
+  <div class="container" style="margin-top:50px">
+    <h3>Fixed Navbar</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
+        <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
+      </div>
+      <div class="col-md-4">
+        <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
+        <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
+      </div>
+      <div class="col-md-4">
+        <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
+        <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
+      </div>
+    </div>
+  </div>
+
+  <h1>Scroll this page to see the effect</h1> -->
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+div {
+    display: inline-block;
+    /* margin-top: 30px; */
+    /* background-color: black; */
+  }
+
+
+
+  input {
+    align-items: center;
+    width: auto;
+    padding: 8px;
+    margin: 6px 0;
+    border: none;
+    border-bottom: 1px solid orange;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: right;
+    color: slategray;
+    background-color: black;
+  }
+
+
+ span {
+    display: inline-block;
+    padding: 6px 12px;
+    /* margin: 7px; */
+    border: none;
+    border-bottom: 1px solid orange;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: right;
+    color: slategray;
+    /* background-color: black; */
+  }
+
+
+
+
+  .topRight {
+    position: absolute;
+    top: 15px;
+    right: 45px;
+  }
+
+
+  table {
+    display: inline-block;
+    border-collapse: collapse;
+    margin: 35px 0px 30px;
+    text-align: right;
+  }
+
+  td,
+  th {
+    font-size: 18px;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    color: white;
+    padding: 12px 15px 12px 15px;
+  }
+
+
+
+  .smallSpan{
+    color: orange;
+    border-bottom: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 35px;
+    letter-spacing: 1px;
+  }
+
+  .largeSpan{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 50px;
+    color: orange;
+    border-bottom: none;
+  }
+
+  .yellowSpan{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: orange;
+    padding: none;
+    font-weight: normal;
+    font-size: 22px;
+    border-bottom: none;
+
+  }
+
+

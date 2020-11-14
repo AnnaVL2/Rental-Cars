@@ -1,0 +1,54 @@
+
+<img *ngIf="!allUsers && ok" src="/assets/images/loading.gif">
+
+<div *ngIf="allUsers" style="margin-top: 30px;"> 
+    <table style="text-align:center; align-content: center; border-bottom: 1px solid orange;">
+        <tr style="border-bottom: 1px solid orange;">
+            <td></td>
+            <td></td>
+            <td></td>
+            <!-- <th>תפקיד</th> -->
+            <th style="padding-bottom: 10px;">שם פרטי</th>
+            <th style="padding-bottom: 10px;">שם משפחה</th>
+            <th style="padding-bottom: 10px;">שם משתמש</th>
+            <!-- <th>Password</th> -->
+            <th style="padding-bottom: 10px;">ת.לידה</th>
+            <th style="padding-bottom: 10px;">מין</th>
+            <th style="padding-bottom: 10px;">דוא"ל</th>
+            <th style="padding-bottom: 10px;">מס' משתמש</th>
+            <!-- <th>Role</th> -->
+            <!-- <th style="padding-bottom: 10px;">תמונה</th> -->
+
+            <!-- <th>מחיקה</th> -->
+            <!-- <th>עדכון</th> -->
+        </tr>
+
+        <tr><td style="padding-bottom: 20px;"></td></tr>
+
+        <tr *ngFor="let u of allUsers">
+            <td><button (click)="deleteUser(u.userID)" class="blackButton">מחיקה</button></td>
+            <td><button routerLink="/update-user" class="blackButton">עדכון</button></td>
+            <!-- <td><span class="greySpan">{{ u.roleID }}</span></td> -->
+            <td><app-thumbnail w="61" h="38" imageSource="/assets/images/users/{{ u.userID }}.jpg"></app-thumbnail></td>
+
+            <td><span class="greySpan">{{ u.firstName }}</span></td>
+            <td><span class="greySpan">{{ u.lastName }}</span></td>
+            <td><span class="greySpan">{{ u.userName }}</span></td>
+            <!-- <td>{{ u.password }}</td> -->
+            <td><span class="greySpan">{{ u.birthDate | date }}</span></td>
+            <td><span class="greySpan">{{ u.gender}}</span></td>
+            <td><span class="greySpan">{{ u.email }}</span></td>
+            <td><span class="greySpan">{{ u.userID }}</span></td>
+            <!-- <td>{{u.role}}</td> -->
+
+        </tr>
+    </table><br>
+
+<a routerLink="/add-user" class="blackA" style="height: 48px; width: 160px;">הוספת משתמש</a><br>
+<span class="greySpan" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; color:slategray;">משתמש-1, עובד חברה-2, אדמין-3</span>
+<p></p><br>
+    <!-- <a routerLink="/update-user">עריכה</a> -->
+</div>
+<p></p><br>
+
+
